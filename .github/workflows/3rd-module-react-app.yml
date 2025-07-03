@@ -20,7 +20,7 @@ jobs:
         working-directory: Second-action-react
         run: npm ci # cia ci instaliuoja kaip ir install komanda bet ima versijas is lock failo. safer command siek tiek
       - name: Run tests
-        working-directory: Second-action-react
+        working-directory: Section3/Second-action-react
         run: npm test
   deployment: # runs in parrallel with test job, nebent yra 'needs: test' zemiau
     needs: [test]
@@ -33,10 +33,10 @@ jobs:
         with:
           node-version: 22
       - name: Install dependecies
-        working-directory: Second-action-react
+        working-directory: Section3/Second-action-react
         run: npm ci # cia ci instaliuoja kaip ir install komanda bet ima versijas is lock failo. safer command siek tiek
       - name: Build project
-        working-directory: Second-action-react
+        working-directory: Section3/Second-action-react
         run: npm run build
       - name: Deploy to GitHub Pages
         run: |
