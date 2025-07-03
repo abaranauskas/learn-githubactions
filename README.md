@@ -11,3 +11,22 @@ run: |
     echo "First output"
     echo "Second output"
 ```
+
+```yaml
+# yra daugybe eventu push, pull_request, create, fork, issue ir t.t. repository_dispache, schedule, workwlow_call skaityti spec ka daro kuri https://docs.github.com/en/actions/reference/events-that-trigger-workflows
+on: workflow_dispatch #this mean manually started
+
+on:
+  pull_request:
+    types: [opened, reopened] # dar yra tipai
+jobs:
+  test:
+    runs-on: ubuntu-latest # cia isivaizduoti kaip serveri, cia jau sitam runeryje node js instaliuota tai zinoma is spec jei nebutu reiktu tada naudoti kita stepsa ir ieskoti set up node js actiono market place.
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4       #actionams
+      - name: Print good-bye
+        run: echo "Done Stepsas" #scriptams
+```
+
+Actions istikruju yra workflows. action yra yra custom aplicaija kuri atlieka kazkoki taska pvz parsipulina koda. galima sukurti savo actionus arba naudoti comuniti.
