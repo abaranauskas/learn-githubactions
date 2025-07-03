@@ -26,11 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v4       
-      - name: Setup Node JS
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
+        uses: actions/checkout@v4
       - name: Install dependecies
         working-directory: Section3/Practice-task
         run: npm ci
@@ -42,11 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v4       
-      - name: Setup Node JS
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
+        uses: actions/checkout@v4
       - name: Install dependecies
         working-directory: Section3/Practice-task
         run: npm ci
