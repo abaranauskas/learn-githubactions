@@ -38,6 +38,6 @@ jobs:
       - name: Build project
         working-directory: Second-action-react
         run: npm run build
-      - name: Deploy to GitHub Pages
+      - name: Deploy simulation
         run: |
           echo "Deploying simulation"
