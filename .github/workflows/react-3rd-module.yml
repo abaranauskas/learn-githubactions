@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 22
       - name: Install dependecies
+        working-directory: Second-action-react
         run: npm ci # cia ci instaliuoja kaip ir install komanda bet ima versijas is lock failo. safer command siek tiek
       - name: Run tests
         run: npm test
