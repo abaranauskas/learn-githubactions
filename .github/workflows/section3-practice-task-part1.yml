@@ -1,0 +1,58 @@
+name: Section 3 - Test and deploy react project
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Section3/Practice-task/**'
+  workflow_dispatch:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4       
+      - name: Setup Node JS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependecies
+        working-directory: Section3/Practice-task
+        run: npm ci
+      - name: Run lint
+        working-directory: Section3/Practice-task
+        run: npm run lint
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4       
+      - name: Setup Node JS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependecies
+        working-directory: Section3/Practice-task
+        run: npm ci
+      - name: Run tests
+        working-directory: Section3/Practice-task
+        run: npm test
+  deploy:
+    needs: [lint, test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4       
+      - name: Setup Node JS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependecies
+        working-directory: Section3/Practice-task
+        run: npm ci
+      - name: Build project
+        working-directory: Section3/Practice-task
+        run: npm run build
+      - name: Deploy to Some Server
+        run: |
+          echo 'Simulating deployment to some server'
