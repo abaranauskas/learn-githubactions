@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - 'Second-action-react/**'
+      - 'Section3/Second-action-react/**'
   workflow_dispatch:
 jobs:
   test:
