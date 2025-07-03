@@ -10,6 +10,6 @@ jobs:
         # Corrected line: The toJson function is now inside the GitHub Actions expression.
         # run: 'echo "GitHub Context: ${{ toJson(github) }}"' # sitas failna turi echo atskita kaip apacioje
         run: |
-            echo "GitHub Context:
+            echo "GitHub Context:"
             echo "${{ toJson(github) }}"
         # Outputs the GitHub context to the console  toJSON GitHub funkcija
