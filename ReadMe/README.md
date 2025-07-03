@@ -30,3 +30,6 @@ jobs:
 ```
 
 Actions istikruju yra workflows. action yra yra custom aplicaija kuri atlieka kazkoki taska pvz parsipulina koda. galima sukurti savo actionus arba naudoti comuniti.
+
+### summary of the module 
+![alt text](image.png) 
