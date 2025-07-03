@@ -1,4 +1,4 @@
-name: Test and deploy project(React 3rd Module)
+name: Section 3 - Test and deploy react project
 on:
   push:
     branches:

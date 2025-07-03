@@ -1,4 +1,4 @@
-name: output github context(3rd Module)
+name: Section 3 - output github context
 
 on: workflow_dispatch
 
