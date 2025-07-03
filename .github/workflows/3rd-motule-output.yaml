@@ -1,8 +1,12 @@
 name: Test and deploy project(React 3rd Module)
+
 on: workflow_dispatch
+
 jobs:
   info:
     runs-on: ubuntu-latest
     steps:
       - name: Output GitHub Context
-        run: echo "GitHub Context: ${{ toJson(github) }}" # Outputs the GitHub context to the console  toJSON GitHub funkcija
+        # Corrected line: The toJson function is now inside the GitHub Actions expression.
+        run: echo "GitHub Context: ${{ toJSON(github) }}"
+        # Outputs the GitHub context to the console  toJSON GitHub funkcija
