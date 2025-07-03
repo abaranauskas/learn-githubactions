@@ -22,7 +22,8 @@ jobs:
       - name: Run tests
         working-directory: Second-action-react
         run: npm test
-  deployment: # runs in parrallel with test job
+  deployment: # runs in parrallel with test job, nebent yra 'needs: test' zemiau
+    needs: [test]
     runs-on: ubuntu-latest # kiekvienas jobas runinaant skirtingu runneriu(VM)
     steps:
       - name: Get code
