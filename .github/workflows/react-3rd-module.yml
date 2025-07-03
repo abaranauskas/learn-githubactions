@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'Second-action-react/**'
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest # cia isivaizduoti kaip serveri, cia jau sitam runeryje node js instaliuota tai zinoma is spec
