@@ -1,6 +1,6 @@
 name: Test project(React 3rd Module)
 on:
- push:
+  push:
     branches:
       - main
     paths:
