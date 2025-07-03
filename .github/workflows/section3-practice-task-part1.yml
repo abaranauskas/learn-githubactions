@@ -1,4 +1,4 @@
-name: Section 3 - Test and deploy react project
+name: Section 3 - Practice task part 1
 on:
   push:
     branches:
