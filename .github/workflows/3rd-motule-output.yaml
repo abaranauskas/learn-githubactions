@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Output GitHub Context
         # Corrected line: The toJson function is now inside the GitHub Actions expression.
-        run: echo "GitHub Context: ${{ toJSON(github) }}"
+        run: 'echo "GitHub Context: ${{ toJSON(github) }}"'
         # Outputs the GitHub context to the console  toJSON GitHub funkcija
