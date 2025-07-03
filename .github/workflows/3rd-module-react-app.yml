@@ -1,0 +1,43 @@
+name: Test and deploy project(React 3rd Module)
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Second-action-react/**'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest # cia isivaizduoti kaip serveri, cia jau sitam runeryje node js instaliuota tai zinoma is spec
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4       
+      - name: Setup Node JS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependecies
+        working-directory: Second-action-react
+        run: npm ci # cia ci instaliuoja kaip ir install komanda bet ima versijas is lock failo. safer command siek tiek
+      - name: Run tests
+        working-directory: Second-action-react
+        run: npm test
+  deployment: # runs in parrallel with test job, nebent yra 'needs: test' zemiau
+    needs: [test]
+    runs-on: ubuntu-latest # kiekvienas jobas runinaant skirtingu runneriu(VM)
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4       
+      - name: Setup Node JS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependecies
+        working-directory: Second-action-react
+        run: npm ci # cia ci instaliuoja kaip ir install komanda bet ima versijas is lock failo. safer command siek tiek
+      - name: Build project
+        working-directory: Second-action-react
+        run: npm run build
+      - name: Deploy to GitHub Pages
+        run: |
+          echo "Deploying simulation"
