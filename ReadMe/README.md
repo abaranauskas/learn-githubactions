@@ -36,3 +36,4 @@ Actions istikruju yra workflows. action yra yra custom aplicaija kuri atlieka ka
 
 ## Section 4: workflows & events - deep dive
 
+jei puul request trigeris uzsetintas bet nieko daugiau nesukonfiginta , tada trigerinsis by default. ant: open, sunchronize ir reopened activity tipu.

@@ -1,5 +1,12 @@
 name: Section 4
 on:
+  pull_request:
+    types: 
+      - opened
+    branches:
+      - main
+    paths:
+      - 'Section4/react/**'
   push:
     branches:
       - main
