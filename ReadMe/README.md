@@ -38,4 +38,4 @@ Actions istikruju yra workflows. action yra yra custom aplicaija kuri atlieka ka
 
 jei puul request trigeris uzsetintas bet nieko daugiau nesukonfiginta , tada trigerinsis by default. ant: open, sunchronize ir reopened activity tipu.
 
-branches-ignore: eidzia specifikuoti kuriuos igoruoti. yra dar tags-ignore: veikia panasiai. paths/paths-ignore:
+branches-ignore: eidzia specifikuoti kuriuos igoruoti. yra dar tags-ignore: veikia panasiai. paths/paths-ignore: .negalima abieju iskart paths ir paths-ignore
