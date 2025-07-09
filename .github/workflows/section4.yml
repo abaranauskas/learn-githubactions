@@ -18,8 +18,10 @@ jobs:
         working-directory: Section4/react
         run: npm ci
       - name: Test code
+        working-directory: Section4/react
         run: npm run test
       - name: Build code
+        working-directory: Section4/react
         run: npm run build
       - name: Deploy project
         run: echo "Deploying..."
