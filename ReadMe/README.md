@@ -57,10 +57,11 @@ Skipinti galima su specialiais komentarais komite pvz git commit -m "added comme
 cia artifaktu upload stepsas. ten path turi sutamp jei lokaliai darai  built ir kazkur storinami build failai pvz dist foldery ar dotnet bin foldery. Tai reik ir nurodyt ta folderi kur bus sukurtas runeryje.
 ```yaml
 - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: react-dist-files
-          path: |
-            Section5/react/dist  # sita vieta turi sutapti kur build komanda storina ta ir nukreipiam
-            Section5/react/package.json  # cia sutampa su failu source kodo failu ir jis uploadinamas
+  uses: actions/upload-artifact@v4
+  with:
+    name: react-dist-files
+    #komnetarai path: | negalimi. failina buildas
+    path: |
+      Section5/react/dist
+      Section5/react/package.json
 ```

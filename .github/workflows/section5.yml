@@ -39,8 +39,8 @@ jobs:
           name: react-dist-files
           #komnetarai path: | negalimi. failina buildas
           path: |
-            dist
-            package.json
+            Section5/react/dist
+            Section5/react/package.json
   deploy:
     needs: build
     runs-on: ubuntu-latest
