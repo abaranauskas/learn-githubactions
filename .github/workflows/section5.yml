@@ -38,8 +38,8 @@ jobs:
         with:
           name: react-dist-files
           path: |
-            Section5/react/dist  # sita vieta turi sutapti kur build komanda storina ta ir nukreipiam
-            Section5/react/package.json  # cia sutampa su failu source kodo failu ir jis uploadinamas
+            dist  # sita vieta turi sutapti kur build komanda storina ta ir nukreipiam
+            package.json  # cia sutampa su failu source kodo failu ir jis uploadinamas
   deploy:
     needs: build
     runs-on: ubuntu-latest
