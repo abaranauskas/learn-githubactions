@@ -37,9 +37,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: react-dist-files
+          #komnetarai path: | negalimi. failina buildas
           path: |
-            dist  # sita vieta turi sutapti kur build komanda storina ta ir nukreipiam
-            package.json  # cia sutampa su failu source kodo failu ir jis uploadinamas
+            dist
+            package.json
   deploy:
     needs: build
     runs-on: ubuntu-latest
