@@ -33,3 +33,6 @@ Actions istikruju yra workflows. action yra yra custom aplicaija kuri atlieka ka
 
 ### summary of the module 
 ![alt text](image.png) 
+
+## Section 4: workflows & events - deep dive
+
