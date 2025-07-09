@@ -50,3 +50,6 @@ Skipinti galima su specialiais komentarais komite pvz git commit -m "added comme
 
 ### module summary
 ![alt text](image-1.png)
+
+## Section 5: job artifacts & outputs
+### job artifacts - cia galetu but executable file, containers, mobile app package files, webo failai kurie talpinami. Cia taip vadinami aftifactais. taigi jobas gali pagaminti tuos aftifactus ir kazkur storinti gali kitas jobas naudoti tuos artifaktus. Outputai is jobo. nebutinai binaries bet gali but log failais. bet cia failai ir folderiai pagaminti JOBO kuries bus(gali buti) naudojami kituose JOBUOSE arba manualy(automaticaly) inspected. g
