@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: react-dist-files
-          paths: |
+          path: |
             react-build-dist
             package.json
   deploy:
