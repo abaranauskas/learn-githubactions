@@ -10,8 +10,12 @@ on:
   push:
     branches:
       - main
+      - 'dev-*' # allows other but not /
+      - 'feat/**' # allows futher slashes
     paths:
       - 'Section4/react/**'
+    paths-ignore:
+      - 'Section3/**' # ignore changes in this file
   workflow_dispatch:
 jobs:
   deploy:
