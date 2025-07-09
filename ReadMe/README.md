@@ -38,4 +38,15 @@ Actions istikruju yra workflows. action yra yra custom aplicaija kuri atlieka ka
 
 jei puul request trigeris uzsetintas bet nieko daugiau nesukonfiginta , tada trigerinsis by default. ant: open, sunchronize ir reopened activity tipu.
 
-branches-ignore: eidzia specifikuoti kuriuos igoruoti. yra dar tags-ignore: veikia panasiai. paths/paths-ignore: .negalima abieju iskart paths ir paths-ignore
+branches-ignore: eidzia specifikuoti kuriuos igoruoti. yra dar tags-ignore: veikia panasiai. paths/paths-ignore: .negalima abieju iskart paths ir paths-ignore.
+
+Pullrequest based on fork. netrigerina workflows turi but approvinta jei viskas qualifilina. jei naudojamas trigeris "pull_request_target" tada nereikia approvint bet gali but saugumo spragu. Udemy kursas sako kad bus executinama jei karta jau approvinta GPT sako kad ne.
+
+### canceling and skipping workflows runs
+
+jei jobs fails workflows cancelinama. jei vienas is stepsu failina failina jobs tuo paciu workflow cancelinama. gali butu cancelinama manually. UI nuejus i workflow resti "Cancel workwlow" button.
+
+Skipinti galima su specialiais komentarais komite pvz git commit -m "added comment [skip ci]" rezervuotas komneto keywordas"[skip ci]" daugiau apie skipinima cia: https://docs.github.com/en/actions/how-tos/managing-workflow-runs-and-deployments/managing-workflow-runs/skipping-workflow-runs
+
+### module summary
+![alt text](image-1.png)
