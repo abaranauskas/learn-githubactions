@@ -34,7 +34,7 @@ jobs:
         working-directory: Section5/react
         run: npm run build
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         # uses: actions/upload-artifact@v4
         with:
           name: react-dist-files
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: react-dist-files # turi sutap su name is upload-artifact
       - name: Output content
