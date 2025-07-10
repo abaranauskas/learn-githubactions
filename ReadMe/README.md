@@ -54,7 +54,7 @@ Skipinti galima su specialiais komentarais komite pvz git commit -m "added comme
 ## Section 5: job artifacts & outputs
 ### job artifacts - cia galetu but executable file, containers, mobile app package files, webo failai kurie talpinami. Cia taip vadinami aftifactais. taigi jobas gali pagaminti tuos aftifactus ir kazkur storinti gali kitas jobas naudoti tuos artifaktus. Outputai is jobo. nebutinai binaries bet gali but log failais. bet cia failai ir folderiai pagaminti JOBO kuries bus(gali buti) naudojami kituose JOBUOSE arba manualy(automaticaly) inspected. g
 
-cia artifaktu upload stepsas. ten path turi sutamp jei lokaliai darai  built ir kazkur storinami build failai pvz dist foldery ar dotnet bin foldery. Tai reik ir nurodyt ta folderi kur bus sukurtas runeryje.
+cia artifaktu upload stepsas. ten path turi sutapt jei lokaliai darai built ir kazkur storinami build failai pvz dist foldery ar dotnet bin foldery. Tai reik ir nurodyt ta folderi kur bus executinama runeryje plius ta directorija kur rexcecutins pvz sectio5. v3 ir v4 skiriasi versijos v3 ui parodo artifactta o v4 duoda linka duild step consoleje. panasu v3 geriau. nors resultatas tas pats paklikinus ant linku ar ikonu
 ```yaml
 - name: Upload build artifacts
   uses: actions/upload-artifact@v4

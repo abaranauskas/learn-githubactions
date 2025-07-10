@@ -45,6 +45,12 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    steps:
+    steps:      
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: react-dist-files # turi sutap su name is upload-artifact
+      - name: Output content
+        run: ls
       - name: Deploy
         run: echo "Deploying..."
