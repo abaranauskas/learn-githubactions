@@ -51,6 +51,8 @@ jobs:
         with:
           name: react-dist-files # turi sutap su name is upload-artifact
       - name: Output content
-        run: ls
+        run: |
+            ls
+            ls dist
       - name: Deploy
         run: echo "Deploying..."
